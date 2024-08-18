@@ -1,9 +1,12 @@
 package com.user.app.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class UserModel {
+public class UserModel implements Serializable {
 
+	private static final long serialVersionUID = 4907228452280352093L;
+	
 	private Integer id;
 	private String name;
 	private String address;

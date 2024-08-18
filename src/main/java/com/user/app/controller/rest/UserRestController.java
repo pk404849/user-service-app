@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.user.app.converter.ApiConverter;
 import com.user.app.entity.User;
+import com.user.app.exception.UserException;
 import com.user.app.model.UserModel;
 import com.user.app.service.UserService;
 
@@ -36,7 +37,7 @@ public class UserRestController {
 	        @ApiResponse(responseCode = "404",description = "Resource not found"), 
 	        @ApiResponse(responseCode = "400",description = "Invalid user object")}) 
 	@PostMapping(value = "/save-user")
-	public ResponseEntity<?> createUser(@RequestBody UserModel userModel) {
+	public ResponseEntity<?> createUser(@RequestBody UserModel userModel) throws UserException {
 		User user = ApiConverter.getUserJpaObject(userModel);
 		userService.createUser(user);
 		String message = "User Created Successfully....";

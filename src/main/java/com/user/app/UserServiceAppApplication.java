@@ -8,6 +8,8 @@ public class UserServiceAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(UserServiceAppApplication.class, args);
+		
+		
 		System.out.println("============== main method completed =============");
 	}
 

@@ -22,7 +22,7 @@ public class User {
 	private String name;
 	@Column(name = "ADDRESS")
 	private String address;
-	@Column(name = "DEPT")
+	@Column(name = "DEPT", nullable = false)
 	private String dept;
 	@Column(name = "MOBILE_NUMBER")
 	private String mobileNumber;
