@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 public class ErrorResponse {
 
 	private String message;
-	private int status;
+	private Integer statusCode;
 	private Timestamp dateTime;
 
 	public String getMessage() {
@@ -16,12 +16,12 @@ public class ErrorResponse {
 		this.message = message;
 	}
 
-	public int getStatus() {
-		return status;
+	public Integer getStatusCode() {
+		return statusCode;
 	}
 
-	public void setStatus(int status) {
-		this.status = status;
+	public void setStatusCode(Integer statusCode) {
+		this.statusCode = statusCode;
 	}
 
 	public Timestamp getDateTime() {
@@ -34,7 +34,7 @@ public class ErrorResponse {
 
 	@Override
 	public String toString() {
-		return "ErrorResponse [message=" + message + ", status=" + status + ", dateTime=" + dateTime + "]";
+		return "ErrorResponse [message=" + message + ", status=" + statusCode + ", dateTime=" + dateTime + "]";
 	}
 
 }

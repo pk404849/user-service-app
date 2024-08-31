@@ -15,7 +15,7 @@ public class GlobalExceptionHandler {
 		ErrorResponse response = new ErrorResponse();
 		response.setMessage(userException.getMessage());
 		response.setDateTime(new Timestamp(System.currentTimeMillis()));
-		response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+		response.setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
 		System.out.println("User Exception : "+response);
 		return ResponseEntity.ok(response);
 
@@ -27,7 +27,7 @@ public class GlobalExceptionHandler {
 		ErrorResponse response = new ErrorResponse();
 		response.setMessage(exception.getMessage());
 		response.setDateTime(new Timestamp(System.currentTimeMillis()));
-		response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+		response.setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
 		System.out.println("handleGobalException : "+exception);
 		return ResponseEntity.ok(response);
 	}
